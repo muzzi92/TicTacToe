@@ -12,3 +12,8 @@ class TestGame(object):
     def test_has_current_player_attribute(self):
         game = Game()
         assert game.current_player == 'X'
+
+    def test_take_turn(self):
+        game = Game()
+        game.take_turn(1)
+        assert game.positions[0] == 'X'
