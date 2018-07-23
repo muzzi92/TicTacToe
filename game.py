@@ -6,3 +6,10 @@ class Game(object):
 
     def take_turn(self, index):
         self.positions[index - 1] = self.current_player
+        self.change_player()
+
+    def change_player(self):
+        if self.current_player == 'X':
+            self.current_player = 'O'
+        else:
+            self.current_player = 'X'
