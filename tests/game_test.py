@@ -18,3 +18,6 @@ class TestGame(object):
         game.take_turn(1)
         assert game.positions[0] == 'X'
         assert game.current_player == 'O'
+        game.take_turn(1)
+        assert game.positions[0] == 'X'
+        assert game.current_player == 'O'
