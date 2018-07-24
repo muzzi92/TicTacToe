@@ -11,10 +11,8 @@ class Game(object):
             self.change_player()
 
     def change_player(self):
-        if self.current_player == 'X':
-            self.current_player = 'O'
-        else:
-            self.current_player = 'X'
+        self.current_player = 'O' if self.current_player == 'X' else 'X'
+
 
     def is_position_free(self, index):
         return self.positions[index] != 'X' and self.positions[index] != 'O'
